@@ -6,8 +6,8 @@ This is a mini React app created by Create React App boilerplate with Typescript
 
 ```sh
 # Clone it
-git clone https://github.com/unicar9/giphy-react.git
-cd giphy-react
+git clone https://github.com/unicar9/react-giphy.git
+cd react-giphy
 
 # Add .env file at root directory and add a Giphy API key (see .env-template)
 touch .env
