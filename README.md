@@ -20,6 +20,10 @@ yarn
 yarn start
 ```
 
+## Demo
+
+![demo](./demo.gif)
+
 ## Reasoning behind the approach taken
 
 - Infinite scrolling effect is enabled by [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). It is specifically designed to solve any scoll based effects without constantly listening to scrolling events, rather, it allows us to attach a callback when targeted elements come into view.
