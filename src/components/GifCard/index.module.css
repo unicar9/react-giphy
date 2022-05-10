@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+}
+
+.gif {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.title {
+  padding-bottom: 10px;
+  color: #da22ff;
+  text-align: center;
+}

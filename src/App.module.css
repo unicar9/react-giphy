@@ -1,0 +1,24 @@
+.title {
+  font-size: 3em;
+  color: #da22ff;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 1rem;
+}
+
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loaderWrapper {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

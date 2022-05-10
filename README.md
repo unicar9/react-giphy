@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# React App with Giphy Inifinte Scroll
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a mini React app created by Create React App boilerplate with Typescript support, it integrates with Giphy API to demonstrate infinite scrolling effect.
 
-## Available Scripts
+## How to Run it Locally
 
-In the project directory, you can run:
+```sh
+# Clone it
+git clone https://github.com/unicar9/giphy-react.git
+cd giphy-react
 
-### `npm start`
+# Add .env file at root directory and add a Giphy API key (see .env-template)
+touch .env
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Install dependencies
+yarn
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Start dev server and test the app on http://localhost:3000
+# from the root directory
+yarn start
+```
 
-### `npm test`
+## Reasoning behind the approach taken
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Infinite scrolling effect is enabled by [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). It is specifically designed to solve any scoll based effects without constantly listening to scrolling events, rather, it allows us to attach a callback when targeted elements come into view.
 
-### `npm run build`
+- Styling solution is modular CSS because the app is pretty light-weighted in terms of styles, so I didn't consider other CSS libraries, also it is an out-of-the-box feature in CRA, the advantage is that modular CSS styles are scoped to avoid global naming clashes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Custom hooks with native useState, useEffect and useCallback to handle calling external API with progressing offsets multiple times, also detecting load more timing with Intersection Observer API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Roughly spent 3 hours.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Online References
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Implement intersectionObserver in React: https://dev.to/producthackers/intersection-observer-using-react-49ko
+- Gradient buttons styles: https://gradientbuttons.colorion.co/
+- Loader styles: https://loading.io/css/
